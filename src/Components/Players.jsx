@@ -1,10 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Players = (props) => {
+const Players = ({player, highlight}) => {
+  const [check, setCheck] = useState(false)
+  
+  function change(){
+    setCheck(!check)
+    highlight(player.id)
+  }
   return (
-    <div className='flex gap-2 m-3 p-1 rounded-lg bg-gray-600 text-xl font-mono'>
-      <h3 className='text-xl'>{props.index +1}</h3>
-      <p>{props.name}</p>
+    <div onClick={()=>change()} className={`flex gap-2 ${check&& 'text-red-500'}`}>
+      <p>{player.name}</p>
+      
     </div>
   )
 }

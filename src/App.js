@@ -18,7 +18,7 @@ function App() {
                       <>
                       <Header />
                       <route.component/> 
-                      <Footer />
+                      
                       </>                      
                 }
                 />

@@ -16,5 +16,8 @@
 }
 
 *{
-  overflow-x: none ;
+  overflow-x:hidden ;
+}
+h1,h2{
+  overflow-y:hidden;
 }
